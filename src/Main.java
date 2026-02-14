@@ -36,38 +36,32 @@ public class Main {
         System.out.println("Версия программы с использованием цикла while.");
         System.out.println();
 
-        int money = 800;
-        int daysParking = 1;
-        int remainingMoney = money - 100;
-        while (remainingMoney > 0) {
-            daysParking++;
-            if (daysParking % 5 == 0) {
+        int money = 900;
+        int day = 0;
+        int budget = money;
+        while(money > 0 ) {
+            day++;
+            if (day % 5 == 0) {
                 continue;
             }
-            remainingMoney = remainingMoney - 100;
+            money -=100;
         }
-        if (money % 400 == 0) {
-            daysParking = daysParking + 1;
-        }
-        System.out.println(money + " рублей, вам хватит на " + daysParking + " дней парковки!");
+        System.out.println(budget + " рублей, вам хватит на " + day + " дней парковки!");
         System.out.println();
 
         System.out.println("Версия программы с использованием цикла for .");
         System.out.println();
-
-        daysParking = 1;
-        remainingMoney = money - 100;
-        for (; remainingMoney > 0; ) {
-            daysParking++;
-            if (daysParking % 5 == 0) {
+        day = 0;
+        money = 500;
+        int budgets = money;
+        for (; budgets > 0; ) {
+            day++;
+            if (day % 5 == 0) {
                 continue;
             }
-            remainingMoney = remainingMoney - 100;
+            budgets -= 100;
         }
-        if (money % 400 == 0) {
-            daysParking = daysParking + 1;
-        }
-        System.out.println(money + " рублей, вам хватит на " + daysParking + " дней парковки!");
+        System.out.println(money + " рублей, вам хватит на " + day + " дней парковки!");
         System.out.println();
 
         System.out.println("Задача№4");
